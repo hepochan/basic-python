@@ -4,4 +4,7 @@ text = """
 """
 
 # TODO
-
+text2=text.replace(""",""","""""")
+text3=text2.replace(""".""","""""")
+pi=list(map(len,text3.split()))
+print("".join(map(str,pi)))
