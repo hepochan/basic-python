@@ -1,10 +1,12 @@
 from math import sin
+import math
 # --example--
 # print(sin(0))
 # >>> 0
 # -----------
-h=(3.1415/(2*100))#piは3.1415とした
+n=100
+h=(math.pi/(2*n))
 S=0
-for i in range(1,100):
+for i in range(1,101):
     S=S+(h/2)*(sin(h*i-h)+sin(h*i))
 print(S)
