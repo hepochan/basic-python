@@ -1,23 +1,18 @@
-a = input("aの値を入力: ")
-b = input("bの値を入力: ")
+n=int(input("n="))
 
 # TODO
-def prime(x):
-    n=2
-    if x==1:
-        print("1は素数ではない")
+def prime(n):
+    m=2
+    if n<=1:
+        return False
+    elif type(n)!=int:
+        return False
     else :
-        while x>=n:
-            if n==x:
-                print(f"{x}は素数である")
-                break            
-            if x%n==0:
-                print(f"{x}は素数ではない")
-                break
+        while n>=m:
+            if m==n:
+                return True           
+            if n%m==0:
+                return False
             else :
-                n+=1
-
-c=int(a)
-d=int(b)
-prime(c)
-prime(d)
+                m+=1
+print(prime(n))

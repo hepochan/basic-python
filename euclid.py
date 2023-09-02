@@ -1,17 +1,28 @@
-a = input("a の値を入力: ")
-b = input("b の値を入力: ")
+a = int(input("a の値を入力: "))
+b = int(input("b の値を入力: "))
 
 # TODO
-c=int(a)
-d=int(b)
-if c<d :
-    c=int(b)
-    d=int(a)
-e=c%d
-if e==0:
-    print(f"最大公約数は{d}")
-else:
-    while e!=0:
-        c,d=d,e
-        e=c%d
-    print(f"最大公約数は{d}")
+def euclid(a,b):
+    e=0
+    if a<=0 or b<=0:
+        return False
+    elif type(a)!=int or type(b)!=int:
+        return False
+    else :
+        if a<b:
+            a,b=b,a
+        e=a%b
+        if e==0:
+            return b
+        else:
+            while e!=0:
+                a,b=b,e
+                e=a%b
+            return b
+def mutually(a,b):
+    if euclid(a,b)==1:
+        return True
+    else :
+        return False
+print(euclid(a,b))
+print(f"a,bは互いに素である。{mutually(a,b)}")
