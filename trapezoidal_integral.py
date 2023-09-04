@@ -4,7 +4,7 @@ import math
 # print(sin(0))
 # >>> 0
 # -----------
-def integral(func,a,b,n):
+def integral(func,a=0,b=1,n=100):
     S=0
     h=(b-a)/n
     for i in range(1,n+1):
